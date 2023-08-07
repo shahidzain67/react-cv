@@ -9,9 +9,8 @@ import {
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
+import GitlabIcon from '../components/Icon/GitlabIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
@@ -44,8 +43,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Zain Shahid CV Website',
+  description: "Zain Shahid CV Website",
 };
 
 /**
@@ -69,18 +68,17 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Zain Shahid.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a London based <strong className="text-stone-100">Data Engineer and Full Stack Developer</strong>, currently working
+        at <strong className="text-stone-100">Brilliant Planet</strong> helping build tools to support carbon removal system using algae.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        In my free time time, you can catch me <strong className="text-stone-100">rock climbing</strong> in nature,
+        <strong className="text-stone-100"> knitting</strong> something cosy, or hiking along the beautiful scenary of the{' '}
+        <strong className="text-stone-100">UK</strong>.
       </p>
     </>
   ),
@@ -104,18 +102,79 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I am a Data Engineer and Full Stack Developer experienced with various programming languages including Python, Javascript and C, cloud computing services such as AWS and both frontend and backend web development. Additionally, I am a PhD candidate awaiting a final viva.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    { label: 'Location', text: 'London, UK', Icon: MapIcon },
+    { label: 'Age', text: '26', Icon: CalendarIcon },
+    { label: 'Nationality', text: 'British / Pakistani', Icon: FlagIcon },
+    { label: 'Interests', text: 'Rock climbing, knitting, hiking, literature', Icon: SparklesIcon },
+    {
+      label: 'Study', text: 'University of Manchester', Icon: AcademicCapIcon
+    },
+    { label: 'Employment', text: 'Brilliant Planet', Icon: BuildingOffice2Icon },
   ],
 };
+
+/**
+ * Resume section -- TODO: Standardize resume contact format or offer MDX
+ */
+export const education: TimelineItem[] = [
+  {
+    date: 'September 2023',
+    location: 'University of Salford',
+    title: 'PhD Prosthetics and Orthotics',
+    content: <p>Thesis title: Development of an industrial test platform for foot health devices.
+      <p>I created a robotic system and 3D printed human foot model to test prosthetic and orthotic foot products against clinical standards to provide a test solution for industry.</p>
+      <li><strong>Data Processing and Analysis:</strong> Matlab, Python</li>
+      <li><strong>CAD and Other:</strong> Solidworks, Cura, Vicon/Qualisys, Visual3D</li>
+    </p>,
+  },
+  {
+    date: 'March 2023',
+    location: 'HyperionDev/University of Edinburgh',
+    title: 'Data Science Bootcamp',
+    content: <p>3 month intensive Data Science Bootcamp.
+      <li><strong>Python for Data Science</strong></li>
+      <li><strong>Data Analytics and Exploration:</strong> MySQL, Pandas, Numpy, Seaborn, Matplotlib, Tableau</li>
+      <li><strong>Machine Learning and AI:</strong> regression, supervised learning, unsupervised learning, neural networks </li>
+    </p>,
+  },
+  {
+    date: 'September 2019',
+    location: 'University of Manchester',
+    title: 'BEng Mechatronic Engineering with an Industrial Placement',
+    content: <p>Thesis title: Development of an industrial test platform for foot health devices.
+      <p>I created a robotic system and 3D printed human foot model to test prosthetic and orthotic foot products against clinical standards to provide a test solution for industry.</p>
+      <li><strong>Data Processing and Analysis:</strong> Matlab, Python</li>
+      <li><strong>CAD and Other:</strong> Solidworks, Cura, Vicon/Qualisys, Visual3D</li>
+    </p>,
+  }
+];
+
+export const experience: TimelineItem[] = [
+  {
+    date: 'July 2023 - Present',
+    location: 'Brilliant Planet',
+    title: 'Data Engineer / Full Stack Developer',
+    content: (
+      <p>
+        Building data analysis dashboard with visualizations of live and past wind turbine performance metrics
+        Development of error/event detection through machine learning protocols
+      </p>
+    ),
+  },
+  {
+    date: 'March 2023 - June 2023',
+    location: 'Eleven-I',
+    title: 'Data Scientist/Analyst',
+    content: (
+      <p>
+        Describe work, special projects, notable achievements, what technologies you have been working with, and
+        anything else that would be useful for an employer to know.
+      </p>
+    ),
+  },
+];
 
 /**
  * Skills section
@@ -129,11 +188,11 @@ export const skills: SkillGroup[] = [
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
+        name: 'Spanish',
+        level: 8,
       },
       {
-        name: 'Spanish',
+        name: 'Urdu',
         level: 3,
       },
     ],
@@ -142,15 +201,15 @@ export const skills: SkillGroup[] = [
     name: 'Frontend development',
     skills: [
       {
-        name: 'React',
-        level: 9,
+        name: 'Dash',
+        level: 8,
       },
       {
-        name: 'Typescript',
+        name: 'React',
         level: 7,
       },
       {
-        name: 'GraphQL',
+        name: 'Typescript',
         level: 6,
       },
     ],
@@ -173,18 +232,18 @@ export const skills: SkillGroup[] = [
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'Cloud development/Other',
     skills: [
       {
-        name: 'React Native',
-        level: 9,
+        name: 'Git',
+        level: 8,
       },
       {
-        name: 'Flutter',
-        level: 4,
+        name: 'AWS including API Gateway, EC2, Lambda',
+        level: 7,
       },
       {
-        name: 'Swift',
+        name: 'Docker',
         level: 3,
       },
     ],
@@ -264,49 +323,6 @@ export const portfolioItems: PortfolioItem[] = [
 ];
 
 /**
- * Resume section -- TODO: Standardize resume contact format or offer MDX
- */
-export const education: TimelineItem[] = [
-  {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
-  {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
-];
-
-export const experience: TimelineItem[] = [
-  {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
-    content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
-    ),
-  },
-  {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
-    content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
-    ),
-  },
-];
-
-/**
  * Testimonial section
  */
 export const testimonial: TestimonialSection = {
@@ -336,27 +352,22 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: 'Please reach out through email or LinkedIn.',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'shahidzain67@gmail.com',
+      href: 'mailto:shahidzain67@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
-    },
-    {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: 'London, UK',
+      href: 'https://goo.gl/maps/sCpU991L4Pf3Qurt7',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'shahidzain67',
+      href: 'https://github.com/shahidzain67',
     },
   ],
 };
@@ -365,9 +376,8 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  { label: 'Github', Icon: GithubIcon, href: 'https://github.com/shahidzain67' },
+  { label: 'Gitlab', Icon: GitlabIcon, href: 'https://gitlab.com/shahidzain67' },
+  { label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/zshahidresearch/' },
+  { label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/zshahidresearch' },
 ];
