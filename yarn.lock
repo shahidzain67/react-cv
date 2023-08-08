@@ -913,14 +913,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18.2.18":
-  version: 18.2.18
-  resolution: "@types/react@npm:18.2.18"
+"@types/react@npm:^18.2.19":
+  version: 18.2.19
+  resolution: "@types/react@npm:18.2.19"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 2e0d75de2b618e76780019e52478b1bec2b015a9187aea30f84518c0c3ddc639055bdfea50864aece937bad0cb0544d0100b80d30f5461e72fbc1c3c0be8b140
+  checksum: 1ef657b90c7413451bbac2fd2fbce4f8a093941bc5041d344ab9833bc113c8eebf6318dae8aeeb1a0f922f15bc772507e6aaa0c7b51847b5f7302921c8dd6740
   languageName: node
   linkType: hard
 
@@ -6043,7 +6043,7 @@ __metadata:
     "@tailwindcss/forms": ^0.5.4
     "@tailwindcss/typography": ^0.5.9
     "@types/node": ^20.4.5
-    "@types/react": ^18.2.18
+    "@types/react": ^18.2.19
     "@types/tailwindcss": ^3.1.0
     "@types/webpack-env": ^1.18.1
     "@typescript-eslint/eslint-plugin": ^6.2.1
@@ -6080,7 +6080,7 @@ __metadata:
     stylelint-prettier: ^4.0.2
     tailwindcss: ^3.3.3
     ts-pattern: ^5.0.4
-    typescript: 5.1.6
+    typescript: ^5.1.6
   languageName: unknown
   linkType: soft
 
@@ -7198,7 +7198,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.1.6":
+"typescript@npm:^5.1.6":
   version: 5.1.6
   resolution: "typescript@npm:5.1.6"
   bin:
@@ -7208,7 +7208,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@5.1.6#~builtin<compat/typescript>":
+"typescript@patch:typescript@^5.1.6#~builtin<compat/typescript>":
   version: 5.1.6
   resolution: "typescript@patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"
   bin:
