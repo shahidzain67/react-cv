@@ -12,18 +12,7 @@ import GithubIcon from '../components/Icon/GithubIcon';
 import GitlabIcon from '../components/Icon/GitlabIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
+import heroImage from '../images/peak.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -32,7 +21,6 @@ import {
   ContactType,
   Hero,
   HomepageMeta,
-  PortfolioItem,
   SkillGroup,
   Social,
   TestimonialSection,
@@ -54,7 +42,7 @@ export const SectionId = {
   Hero: 'hero',
   About: 'about',
   Contact: 'contact',
-  Portfolio: 'portfolio',
+  // Portfolio: 'portfolio',
   Resume: 'resume',
   Skills: 'skills',
   Stats: 'stats',
@@ -73,7 +61,7 @@ export const heroData: Hero = {
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         I'm a London based <strong className="text-stone-100">Data Engineer and Full Stack Developer</strong>, currently working
-        at <strong className="text-stone-100">Brilliant Planet</strong> helping build tools to support carbon removal system using algae.
+        at <strong className="text-stone-100">Brilliant Planet</strong> helping build tools to support carbon removal using algae.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         In my free time time, you can catch me <strong className="text-stone-100">rock climbing</strong> in nature,
@@ -123,9 +111,8 @@ export const education: TimelineItem[] = [
     date: 'September 2023',
     location: 'University of Salford',
     title: 'PhD Prosthetics and Orthotics',
-    content: <p>Thesis title: Development of an industrial test platform for foot health devices.
-      <p>I created a robotic system and 3D printed human foot model to test prosthetic and orthotic foot products against clinical standards to provide a test solution for industry.</p>
-      <li><strong>Data Processing and Analysis:</strong> Matlab, Python</li>
+    content: <p> I undertook a PhD at the University of Salford to pursue my interest in engineering applications in medicine. My project titled "Development of an industrial test platform for foot health devices" involved the creation of a robotic system and 3D printed human foot model to test prosthetic and orthotic foot products against clinical standards and provide a test solution for industry. Through this I gained significant experience in outlining a specification to meet the needs of stakeholders and align with cutting edge research, design, develop and validate a product and ultimately deliver a test package to be implemented in industry.
+      <li><strong>Data Processing and Analytics:</strong> Matlab, Python (Pandas)</li>
       <li><strong>CAD and Other:</strong> Solidworks, Cura, Vicon/Qualisys, Visual3D</li>
     </p>,
   },
@@ -133,7 +120,7 @@ export const education: TimelineItem[] = [
     date: 'March 2023',
     location: 'HyperionDev/University of Edinburgh',
     title: 'Data Science Bootcamp',
-    content: <p>3 month intensive Data Science Bootcamp.
+    content: <p>Following my degree, I completed a 3 month intensive Data Science Bootcamp alongside my PhD to further develop my understanding of gold standard data science practices. The course gave me an opportunity to apply my existing Python skills to advanced projects involving data wrangling, cleaning and analysis while also introducing me to core machine learning concepts.
       <li><strong>Python for Data Science</strong></li>
       <li><strong>Data Analytics and Exploration:</strong> MySQL, Pandas, Numpy, Seaborn, Matplotlib, Tableau</li>
       <li><strong>Machine Learning and AI:</strong> regression, supervised learning, unsupervised learning, neural networks </li>
@@ -143,10 +130,8 @@ export const education: TimelineItem[] = [
     date: 'September 2019',
     location: 'University of Manchester',
     title: 'BEng Mechatronic Engineering with an Industrial Placement',
-    content: <p>Thesis title: Development of an industrial test platform for foot health devices.
-      <p>I created a robotic system and 3D printed human foot model to test prosthetic and orthotic foot products against clinical standards to provide a test solution for industry.</p>
-      <li><strong>Data Processing and Analysis:</strong> Matlab, Python</li>
-      <li><strong>CAD and Other:</strong> Solidworks, Cura, Vicon/Qualisys, Visual3D</li>
+    content: <p>I completed my Bachelors of Mechatronic Engineering with an Industrial Placement at the University of Manchester and achieved a thorough education in the underlying theory, concepts, and science behind programming, robotics and electronic engineering. It was here that I discovered my passion for engineering applied in medical, financial and tech sectors, end-to-end application software development, and found that I have a knack for grasping new technologies quickly.
+      <li><strong>Embedded systems:</strong> C, C++, Machine code, Arduino, Raspberry Pi</li>
     </p>,
   }
 ];
@@ -157,9 +142,9 @@ export const experience: TimelineItem[] = [
     location: 'Brilliant Planet',
     title: 'Data Engineer / Full Stack Developer',
     content: (
-      <p>
-        Building data analysis dashboard with visualizations of live and past wind turbine performance metrics
-        Development of error/event detection through machine learning protocols
+      <p> I am currently working as a Data Engineer / Full Stack Developer at Brilliant Planet. Operating in the carbon market, we are a startup building algae-based carbon capture technology to offset emissions. Here I am responsible for building the core technologies used by the science and engineering teams to wrangle large datasets, analyse this data, and visualise control systems, all through intuitive web applications.  
+      <li><strong>Frontend:</strong> React/Typescript, Dash</li>
+      <li><strong>Backend/Cloud/Database:</strong> AWS, MySQL, Docker, Gitlab CI/CD, Node </li>
       </p>
     ),
   },
@@ -169,8 +154,32 @@ export const experience: TimelineItem[] = [
     title: 'Data Scientist/Analyst',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Eleven-I is responsible for creating embedded devices for wind turbine management and analysis. I was brought on during my PhD to develop data science and analytics protocols currently in place, to provide further insight into the performance of individual wind turbines.
+        <li><strong>Analytics:</strong> Tableau, Grafana, Python (Pandas, Numpy) </li>
+        <li><strong>Core technologies:</strong> C, C++, Docker, Kubernetes </li>
+      </p>
+    ),
+  },
+  {
+    date: 'June 2019 - September 2019',
+    location: 'Codethink Ltd',
+    title: 'Software Engineer Internship',
+    content: (
+      <p>
+        Codethink are open source specialists in developing system-level software infrastructure for clients in the electronics, finance, medical and automotive sectors. I completed a 3 month placement with the company within the automotive team. Here I had the opportunity to liaise with clients and contribute to several repositories to document product development and update README's for technical and non-technical users. Additionally, I delivered open-source python based projects to engage with the wider GNOME 
+        community and attended an international GNOME conference.
+        <li><strong>Core technologies:</strong> Python, Git, Linux (GNOME) </li>
+      </p>
+    ),
+  },
+  {
+    date: 'June 2017 - September 2018',
+    location: 'Yelo Test Systems',
+    title: 'Applications Engineer Industrial Placement',
+    content: (
+      <p>
+        Yelo produces electronics test equipment for the photonics industry. I was offered a scholarship and industrial placement with the company to rotate between electronics, mechanical and software engineering teams. Through my placement I developed Excel macros to wrangle, clean and visualise test results. Additionally, I designed and delivered an autonomous manufacturing tool and organised outreach programs with local schools to introduce students to software engineering and programming.
+        <li><strong>Core technologies:</strong> Visual Basic, LabView, C, Arduino </li>
       </p>
     ),
   },
@@ -201,126 +210,55 @@ export const skills: SkillGroup[] = [
     name: 'Frontend development',
     skills: [
       {
+        name: 'Static Web Development',
+        level: 10,
+      },
+      {
         name: 'Dash',
         level: 8,
       },
       {
-        name: 'React',
+        name: 'React/Typescript',
         level: 7,
-      },
-      {
-        name: 'Typescript',
-        level: 6,
       },
     ],
   },
   {
-    name: 'Backend development',
+    name: 'Backend/Cloud/Database',
     skills: [
       {
-        name: 'Node.js',
+        name: 'AWS',
         level: 8,
       },
       {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
-      },
-    ],
-  },
-  {
-    name: 'Cloud development/Other',
-    skills: [
-      {
-        name: 'Git',
+        name: 'MySQL',
         level: 8,
-      },
-      {
-        name: 'AWS including API Gateway, EC2, Lambda',
-        level: 7,
       },
       {
         name: 'Docker',
-        level: 3,
+        level: 7,
+      },
+    ],
+  },
+  {
+    name: 'Analytics',
+    skills: [
+      {
+        name: 'Tableau',
+        level: 8,
+      },
+      {
+        name: 'Grafana',
+        level: 8,
+      },
+      {
+        name: 'Python (Pandas, NumPy)',
+        level: 8,
       },
     ],
   },
 ];
 
-/**
- * Portfolio section
- */
-export const portfolioItems: PortfolioItem[] = [
-  {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage1,
-  },
-  {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage2,
-  },
-  {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage3,
-  },
-  {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage4,
-  },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
-  },
-];
 
 /**
  * Testimonial section
@@ -378,6 +316,6 @@ export const contact: ContactSection = {
 export const socialLinks: Social[] = [
   { label: 'Github', Icon: GithubIcon, href: 'https://github.com/shahidzain67' },
   { label: 'Gitlab', Icon: GitlabIcon, href: 'https://gitlab.com/shahidzain67' },
-  { label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/zshahidresearch/' },
+  { label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/z-shahid/' },
   { label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/zshahidresearch' },
 ];
